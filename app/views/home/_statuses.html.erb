@@ -1,0 +1,19 @@
+<section id="statuses">
+  <ul>
+  <% @people.each do |person| -%>
+    <li>
+    <% if person.status -%>
+      <%= render :partial => 'shared/status',
+                 :object => person.status %>
+    <% else -%>
+      <span class="status_name">
+        <%= person.name %>
+      </span>
+      <span class="status">
+        <i>No status yet!</i>
+      </span>
+    </li>
+    <% end -%>
+  <% end -%>
+  </ul>
+</section>

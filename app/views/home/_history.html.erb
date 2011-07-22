@@ -1,0 +1,6 @@
+<ul>
+<% @statuses.each do |status| -%>
+  <li><%= render :partial => 'shared/status',
+                 :object => status %></li>
+<% end -%>
+</ul>
