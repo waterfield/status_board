@@ -1,0 +1,12 @@
+<% if @projects.any? -%>
+  <% content_for :projects_bar do -%>
+    <section id="projects">
+      <ul>
+      <%= render :partial => 'projects/status', :object => nil, :as => :project %>
+      <% @projects.each do |project| -%>
+        <%= render :partial => 'projects/status', :object => project, :as => :project %>
+      <% end -%>
+      </ul>
+    </section>
+  <% end -%>
+<% end -%>

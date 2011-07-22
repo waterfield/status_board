@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  skip_before_filter :get_current_project
+  
   def index
     @projects = Project.all
   end
@@ -40,5 +42,14 @@ class ProjectsController < ApplicationController
       flash[:error] = "Oops, something went wrong: #{@project.errors.full_messages.join(', ')}"
     end
     redirect_to projects_path
+  end
+  
+  def select
+    if params[:id] == 'all'
+      session.delete :project_id
+    else
+      session[:project_id] = params[:id]
+    end
+    redirect_to :back
   end
 end

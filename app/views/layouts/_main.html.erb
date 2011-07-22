@@ -1,7 +1,11 @@
+<%= content_for :projects_bar %>
+
 <section class="main">
   <% if notice %><p class="notice"><%= notice %></p><% end %>
   <% if alert %><p class="alert"><%= alert %></p><% end %>
-  <%= yield %>
+  <section class="content">
+    <%= yield %>
+  </section>
 </section>
 
 <div class="forkme">

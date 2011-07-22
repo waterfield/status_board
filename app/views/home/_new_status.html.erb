@@ -1,8 +1,5 @@
 <section id="new_status">
 <%= form_for @status do |f| -%>
-  <p>
-    Set your status:
-    <%= f.text_field :text, :class => 'focus' %>
-  </p>
+  <p><%= f.text_field :text, :class => 'focus' %></p>
 <% end -%>
 </section>

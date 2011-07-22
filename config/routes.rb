@@ -3,6 +3,7 @@ StatusBoard::Application.routes.draw do
   resources :projects do
     member do
       post :leave, :join
+      get :select
     end
   end
   resources :statuses

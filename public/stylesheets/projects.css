@@ -1,0 +1,33 @@
+#projects {
+  margin: 0;
+}
+
+#projects ul {
+  margin: 0;
+  padding: 0;
+  padding-left: 5px;
+}
+
+#projects li {
+  background: #f2f2f2;
+  display: inline-block;
+  border: 2px solid black;
+  border-top: 0;
+  vertical-align: top;
+}
+
+#projects div {
+  padding: 5px;
+  min-height: 50px;
+  width: 100px;
+  text-align: center;
+}
+
+#projects a {
+  text-decoration: none;
+  color: black;
+}
+
+#projects li.selected {
+  border-bottom: 7px solid black;
+}

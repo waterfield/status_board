@@ -1,0 +1,5 @@
+<li<%= " class='selected'" if project == @project %>>
+  <a href="<%= select_project_path(project || 'all') %>">
+    <div><%= project.try(:name) || 'Show all' %></div>
+  </a>
+</li>

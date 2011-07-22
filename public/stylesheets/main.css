@@ -16,6 +16,10 @@ section {
 }
 
 section.main {
+  margin-top: 0;
+}
+
+section.content {
   width: 70%;
   min-width: 40em;
 }
