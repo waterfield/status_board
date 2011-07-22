@@ -9,6 +9,7 @@ class Person < ActiveRecord::Base
   
   has_many :statuses
   has_one :status, :order => "created_at desc"
+  has_and_belongs_to_many :projects
   
   validates :name, :presence => true
   

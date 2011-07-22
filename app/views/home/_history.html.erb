@@ -4,3 +4,7 @@
                  :object => status %></li>
 <% end -%>
 </ul>
+
+<% if @more -%>
+  <%= link_to "see more", statuses_path %>
+<% end -%>
