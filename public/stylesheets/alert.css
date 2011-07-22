@@ -1,0 +1,18 @@
+p.notice {
+  background: #afa;
+  border: 2px solid #6a6;
+}
+
+p.alert,
+p.error {
+  background: #faa;
+  border: 2px solid #a66;
+}
+
+p.notice,
+p.alert,
+p.error {
+  padding: 0.5em;
+  font-style: italic;
+  text-align: center;
+}

@@ -1,0 +1,35 @@
+header {
+  background: black;
+  padding: 0.5em;
+  color: white;
+  font-size: 80%;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  float: right;
+}
+
+nav a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0 1em 0 0;
+  text-align: center
+}
+
+nav li {
+  display: inline;
+  padding-left: 1em
+}

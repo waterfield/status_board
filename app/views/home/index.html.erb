@@ -1,0 +1,13 @@
+<ul>
+<% @people.each do |person| -%>
+  <li>
+    <h1><%= person.name %></h1>
+    <p>
+    <% if person.status -%>
+      <%= person.status.text %>
+    <% else -%>
+      <i>No status yet!</i>
+    <% end -%>
+  </li>
+<% end -%>
+</ul>
