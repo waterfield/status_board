@@ -1,0 +1,11 @@
+<%= link_to "Go home", root_path %>
+
+<h2>Status history</h2>
+
+<ul>
+<% @statuses.each do |status| -%>
+  <li>
+    <%= render :partial => 'shared/status',
+               :object => status %></li>
+<% end -%>
+</ul>

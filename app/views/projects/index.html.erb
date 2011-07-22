@@ -1,0 +1,31 @@
+<%= link_to "Go home", root_path %>
+
+<h1>Projects</h1>
+
+<% if @projects.any? %>
+
+<ul>
+<% @projects.each do |project| -%>
+  <li>
+    <h2><%= project.name %></h2>
+      <% if current_person.member_of? project -%>
+        <%= link_to 'Leave project', leave_project_path(project), :method => :post %>
+      <% else -%>
+        <%= link_to 'Join project', join_project_path(project), :method => :post %>
+      <% end -%>
+      <ul>
+      <% project.people.each do |person| -%>
+        <li><%= person.name %></li>
+      <% end -%>
+      </ul>
+  </li>
+<% end -%>
+</ul>
+
+<% else -%>
+
+<p><i>No projects defined yet.</i></p>
+
+<% end -%>
+
+<%= link_to "Add new project", new_project_path %>

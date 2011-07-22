@@ -1,0 +1,11 @@
+<h2>Add a new project</h2>
+
+<%= form_for @project do |f| -%>
+  <p><%= f.label :name %><br/>
+  <%= f.text_field :name %></p>
+  
+  <p><%= check_box_tag :member %>
+  I'm on this project</p>
+  
+  <%= f.submit %>
+<% end -%>
